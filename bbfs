@@ -1,0 +1,171 @@
+<!DOCTYPE index.html>
+<index.html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bregninge-Bjergsted Friskole</title>
+<style>
+:root{
+  --bg:#080a0c; --surface:#101317; --surface2:#15191e; --line:#262c33;
+  --text:#f5f7f8; --muted:#9da6af; --accent:#ffffff; --accent2:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(8,10,12,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:var(--accent);color:#081008;display:grid;place-items:center;font-size:19px}
+.logo small{display:block;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.04em}
+nav{display:flex;gap:6px}
+nav a{padding:10px 14px;border-radius:10px;color:#cdd2d7;font-size:14px}
+nav a:hover{background:#171b20;color:#fff}
+.menu{display:none;background:var(--surface2);border:1px solid var(--line);color:white;border-radius:10px;padding:9px 12px}
+.hero{padding:100px 0 75px;background:
+ radial-gradient(circle at 75% 25%,rgba(255,255,255,.10),transparent 30%),
+ radial-gradient(circle at 20% 80%,rgba(255,255,255,.05),transparent 30%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #30343a;background:#111418;color:var(--accent2);border-radius:999px;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;max-width:760px}
+.hero p{margin:24px 0 30px;color:var(--muted);font-size:18px;max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 18px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:#081008;border-color:var(--accent)}
+.btn.secondary{background:var(--surface);color:white}
+.hero-card{background:linear-gradient(145deg,#171c20,#0d1013);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.hero-card .big{font-size:58px;font-weight:850;line-height:1}
+.hero-card span{color:var(--muted)}
+.stat{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border-bottom:0}
+section{padding:80px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}
+.eyebrow{color:var(--accent);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.13em}
+h2{font-size:38px;letter-spacing:-.035em}
+.section-head p{color:var(--muted);max-width:520px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:#3a424b}
+.icon{width:42px;height:42px;border-radius:12px;background:#1d2126;color:var(--accent);display:grid;place-items:center;margin-bottom:18px;font-weight:800}
+.card h3{font-size:19px;margin-bottom:7px}
+.card p{color:var(--muted);font-size:14px}
+.news{display:grid;grid-template-columns:1.4fr .6fr;gap:16px}
+.news-main{min-height:330px;padding:32px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(145deg,#151a1e,#0c0f11);display:flex;flex-direction:column;justify-content:end}
+.news-main h3{font-size:32px;max-width:600px}
+.news-main p{color:var(--muted);margin:10px 0 20px}
+.news-list{display:grid;gap:16px}
+.news-item{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.news-item b{display:block;margin-bottom:6px}.news-item span{color:var(--muted);font-size:13px}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.quick a{background:var(--surface);border:1px solid var(--line);padding:20px;border-radius:15px;font-weight:700}
+.quick a:hover{border-color:var(--accent);color:var(--accent)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-box{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+.contact-box p{color:var(--muted);margin-top:8px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:13px}
+.footer-row{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+ nav{display:none}.menu{display:block}.hero-grid,.news,.contact{grid-template-columns:1fr}
+ .grid{grid-template-columns:1fr 1fr}.quick{grid-template-columns:1fr 1fr}
+ .hero{padding-top:70px}section{padding:60px 0}
+}
+@media(max-width:520px){.grid,.quick{grid-template-columns:1fr}h2{font-size:30px}.hero p{font-size:16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">
+      <div class="logo-mark">B</div>
+      <div>Bregninge-Bjergsted Friskole<small>BBFS · Jyderup</small></div>
+    </a>
+    <nav>
+      <a href="#om">Om skolen</a><a href="#nyheder">Nyheder</a><a href="#info">Information</a>
+      <a href="#kalender">Kalender</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="menu" onclick="document.querySelector('nav').style.display =
+      document.querySelector('nav').style.display === 'flex' ? 'none' : 'flex'">Menu ☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">● Velkommen til BBFS</div>
+      <h1>En skole med plads til hele mennesket.</h1>
+      <p>Bregninge-Bjergsted Friskole er en levende friskole med fokus på faglighed, trivsel, fællesskab og personlig udvikling.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#info">Se information</a>
+        <a class="btn secondary" href="#kontakt">Kontakt skolen →</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">0–9.</div><span>klassetrin</span>
+      <div class="stat"><span>Adresse</span><strong>Bregningevej 25</strong></div>
+      <div class="stat"><span>By</span><strong>4450 Jyderup</strong></div>
+      <div class="stat"><span>Telefon</span><strong>59 29 13 42</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="om">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Om BBFS</div><h2>Det handler om mere end undervisning.</h2></div>
+  <p>Skolen arbejder med både faglig, social og personlig udvikling og lægger vægt på trygge fællesskaber.</p></div>
+  <div class="grid">
+   <article class="card"><div class="icon">01</div><h3>Faglighed</h3><p>Undervisningen tager udgangspunkt i elevernes forskellige forudsætninger og giver plads til faglig udvikling.</p></article>
+   <article class="card"><div class="icon">02</div><h3>Fællesskab</h3><p>En lille skole skaber tætte relationer mellem elever, forældre og medarbejdere.</p></article>
+   <article class="card"><div class="icon">03</div><h3>Trivsel</h3><p>Tryghed, respekt og relationer er en vigtig del af hverdagen på skolen.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="nyheder">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Seneste</div><h2>Nyheder & opslag</h2></div><a class="btn secondary" href="#">Alle nyheder →</a></div>
+  <div class="news">
+   <article class="news-main"><div class="eyebrow">BBFS</div><h3>Velkommen til skolens nye digitale forside</h3><p>Her kan aktuelle nyheder, beskeder og vigtige informationer samles på ét sted.</p><a class="btn primary" href="#">Læs mere</a></article>
+   <div class="news-list">
+    <article class="news-item"><b>Aktiviteter og kalender</b><span>Se kommende arrangementer og skoledage.</span></article>
+    <article class="news-item"><b>Nyt fra skolen</b><span>Aktuelle beskeder til elever og forældre.</span></article>
+    <article class="news-item"><b>Vigtige dokumenter</b><span>Find information og praktiske dokumenter.</span></article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="info">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Genveje</div><h2>Det du bruger mest.</h2></div></div>
+  <div class="quick">
+   <a href="#">📅 Kalender</a><a href="#">📚 Ugeplaner</a><a href="#">📢 Opslag</a><a href="#">📄 Dokumenter</a>
+  </div>
+ </div>
+</section>
+
+<section id="kalender">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Planlægning</div><h2>Kalender</h2></div><p>Årskalenderen opdateres løbende. Brug skolens kalender til at holde styr på arrangementer og anderledes dage.</p></div>
+  <div class="card"><h3>📅 Kommende aktiviteter</h3><p style="margin-top:8px">Her kan skolens aktuelle kalender integreres direkte, når den relevante Skoleporten-kalender er tilgængelig.</p></div>
+ </div>
+</section>
+
+<section id="kontakt">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow">Kontakt</div><h2>Find os</h2></div></div>
+  <div class="contact">
+   <div class="contact-box"><h3>Bregninge-Bjergsted Friskole</h3><p>Bregningevej 25<br>4450 Jyderup</p></div>
+   <div class="contact-box"><h3>Kontakt</h3><p>Telefon: +45 59 29 13 42<br>Email: kontor@bbfs.dk</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-row"><span>© Bregninge-Bjergsted Friskole</span><span>BBFS · Jyderup</span></div>
+</footer>
+</body>
+</html>
